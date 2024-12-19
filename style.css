@@ -231,7 +231,61 @@ body>main:nth-child(1)>main:nth-child(2)>section:nth-child(3)>div:nth-child(8){
     box-shadow: 10px 10px 10px rgb(0, 0, 0);
     z-index: 5;
 }
+#btn-cv:hover{
+    background-color: rgb(234, 98, 98);
 
+}
+.typing {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    animation: typing 4s steps(30, end) infinite, blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 18ch; /* Adjust to the number of characters */
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: black;
+    }
+
+}
+.hello {
+    font-size: 2em;
+    font-weight: bold;
+    animation: fadeScale 2s ease-in-out infinite;
+}
+
+@keyframes fadeScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
 /*----------------------------------------------nav---------------------------------------------------------*/
 /*nav section*/
 main:nth-child(2){

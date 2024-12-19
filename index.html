@@ -23,20 +23,20 @@
 <!--hello section-->
 <main id="hero-section">
     <header>
-        <h4>Hello.</h4>
+        <h4 class="hello">Hello.</h4>
     </header>
     <!--hero section-->
     <main>
         <!--Welcome section-->
         <section>
-            <h2 class="animate__bounceIn animate__bounce infinity " data-aos-duration="1000">I'm Shimara Appuhami</h2>
+            <h2 class="typing" data-aos-duration="1000">I'm Shimara Appuhami</h2>
             <h3 >Aspiring Software Engineer|Passionate Leaner</h3>
             <p>I aim to excel in technical skills while <br>
                 understanding the societal impact of <br>
                 <br>technology, working on projects that drive
                 <br>meaningful advancements in the tech
                 <br>industry.</p>
-            <button >Download My CV</button>
+            <button id="btn-cv" onclick="window.location.href=''">Download My CV</button>
         </section>
         <!--welcome section my image-->
         <section data-aos="zoom-out" data-aos-duration="1000">
@@ -133,7 +133,7 @@
             <img src="assets/images/education/school.jpg">
             <h6>Princess Of Wales Collage</h6><br>
             <address>2AD, Galle Rd,<br> Moratuwa.</address>
-            <button>See more</button>
+            <button onclick="window.location.href='https://princesssrilanka.com/'">See more</button>
         </div>
 
         <!--education 2-->
@@ -143,7 +143,7 @@
             <img src="assets/images/education/aat.jpg" width="50" height="50">
             <h6>AAT Sri Lanka</h6>
             <address>30A Malalasekhara Rd,<br> Colombo.</address>
-            <button>See more</button>
+            <button onclick="window.location.href='https://www.aatsl.lk/index.php/en/'" >See more</button>
         </div>
 
         <!--education 3-->
@@ -153,7 +153,7 @@
             <img src="assets/images/education/images%20(1).png" width="50" height="50">
             <h6>IJSE Institute</h6>
             <address>50B Grace Peiris Rd,<br> Panadura.</address>
-            <button>See more</button>
+            <button onclick="window.location.href='https://www.ijse.lk/'">See more</button>
         </div>
     </section>
 </main>
@@ -468,17 +468,19 @@
     <!--Social media icons-->
     <section id="social-media-icons">
         <div>
-            <a href=""><img class="s-icon" data-aos="flip-left"
+            <a href="https://wa.me/1234567890"  title="Chat on WhatsApp"><img class="s-icon" data-aos="flip-left"
                             data-aos-easing="ease-out-cubic"
-                            data-aos-duration="2000" src="assets/images/icons/icons8-whatsapp-48.png" alt="facebook"></a>
-            <a href=""><img class="s-icon" data-aos="flip-left"
+                            data-aos-duration="2000" src="assets/images/icons/icons8-whatsapp-48.png" alt="whatsApp"></a>
+
+            <a href="https://www.linkedin.com/in/ShimaraAppuhami" ><img class="s-icon" data-aos="flip-left"
                             data-aos-easing="ease-out-cubic"
-                            data-aos-duration="2000" src="assets/images/icons/icons8-linkedin-48.png" alt="instagram"></a>
-            <a href=""><img class="s-icon" data-aos="flip-left"
+                            data-aos-duration="2000" src="assets/images/icons/icons8-linkedin-48.png" alt="linkedin"></a>
+            <a href="https://twitter.com/ShimaraAppuhami" ><img class="s-icon" data-aos="flip-left"
                             data-aos-easing="ease-out-cubic"
                             data-aos-duration="2000" src="assets/images/icons/icons8-twitter-48.png" alt="twitter"></a>
         </div>
     </section>
+
     <!--contact form-->
     <section id="contact-form">
         <form id="email-form" onsubmit="sendEmail(event)">
