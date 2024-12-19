@@ -1,0 +1,168 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background: #003366;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.upload-file {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.upload-file input {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 auto;
+    display: block;
+    background-color: #ffffff;
+    color: #003366;
+    border: 2px solid #003366;
+    transition: all 0.3s ease;
+}
+
+.upload-file input:hover {
+    background-color: #003366;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.image-area {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.image-area img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border: 3px solid #003366;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #003366;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.file-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.file-area textarea {
+    width: 80%;
+    max-width: 700px;
+    height: 250px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #003366;
+    background-color: #ffffff;
+    color: #003366;
+    box-sizing: border-box;
+    resize: none;
+    font-size: 16px;
+}
+
+button {
+    width: 130px;
+    height: 45px;
+    border-radius: 5px;
+    background: #0066cc;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    display: block;
+    margin: 30px auto;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #004a99;
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+/* Mobile responsive */
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .upload-file input {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .image-area img {
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .file-area textarea {
+        height: 200px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .upload-file input {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .image-area img {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .file-area textarea {
+        height: 150px;
+        font-size: 12px;
+    }
+
+    button {
+        width: 100px;
+        height: 35px;
+        font-size: 12px;
+    }
+}

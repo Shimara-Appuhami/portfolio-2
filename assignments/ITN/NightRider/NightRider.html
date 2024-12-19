@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Night Rider</title>
+    <style>
+        section:nth-child(1){
+            position: absolute;
+            width: 760px;
+            height: 75px;
+            border: 2px solid red;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        div{
+            width: 100px;
+            height: 50px;
+            border: 2px solid gray;
+            background: white;
+            margin: 10px;
+            display: inline-block;
+        }
+        section:nth-child(2)>button{
+            position: relative;
+            width: 70px;
+            height: 40px;
+            left: 690px;
+            top: 400px;
+
+
+        }
+    </style>
+</head>
+<body>
+<section id="light-panel">
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+
+</section>
+
+<section id="btn-panel">
+    <button id="btn-start">Start</button>
+    <button id="btn-stop">Stop</button>
+</section>
+
+<script src="lib/jquery-3.7.1.min.js"></script>
+<script>
+
+    let light_count=6;
+    let current_light=-1;
+    let direction="RIGHT" //right left
+    let intervalId=null;
+
+    updateLight=() => {
+        if (direction==="RIGHT"){
+            current_light++;
+            $(".light").css("background","white");
+            $(".light").eq(current_light).css("background","red");
+            $(".light").eq(current_light-1).css("background","pink");
+
+            if (current_light===light_count-1){
+                direction="LEFT";
+            }
+        }else {
+            current_light--;
+            $(".light").css("background","white");
+            $(".light").eq(current_light).css("background","red");
+            $(".light").eq(current_light+1).css("background","pink");
+
+            if (current_light===0){
+                direction="RIGHT";
+            }
+        }
+    }
+
+
+
+    $("#btn-start").on('click',function ()  {
+        intervalId=setInterval(updateLight,100);
+    });
+
+    $("#btn-stop").on('click',function ()  {
+        clearInterval(intervalId);
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

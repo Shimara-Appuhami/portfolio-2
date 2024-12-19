@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!--nav section-->
+<main class="container" id="nav">
+    <nav class="navbar bg-body-tertiary fixed-top">
+
+        <div class="container-fluid" id="navButton">
+            <img class="keels-img" src="assets/images/img_12.png">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <!--                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">-->
+                <img src="assets/icons/icons8-home-50.png">
+                <!--                <span class="navbar-icon"></span>-->
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <!--                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dashboard</h5>-->
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="navbar-nav justify-content-end flex-grow-1 pe-3" id="nav-content">
+                        <li class="nav-item">
+                            <span id="dashboardNav" class="nav-link"><img src="assets/icons/icons8-dashboard-48.png">DASHBOARD </span>
+                        </li>
+                        <li class="nav-item">
+                            <span id="customerNav" class="nav-link"><img src="assets/icons/icons8-about-me-50%20(1).png">CUSTOMERS </span>
+                        </li>
+                        <li class="nav-item">
+                            <span id="itemNav" class="nav-link" ><img src="assets/icons/icons8-delivered-box-24.png">ITEMS</span>
+                        </li>
+
+                        <li class="nav-item">
+                            <span id="orderNav" class="nav-link"><img src="assets/icons/icons8-cart-24.png">ORDER</span>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</main>
+
+<!--dashboard-->
+<main class="container " id="dashboardPage" >
+    <div class="container-fluid">
+        <div class="dashboardBody">
+
+                <!-- Cards for Sales Overview -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card text-white bg-success mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Sales</h5>
+                                <p class="card-text">Rs.10,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-white bg-info mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Products</h5>
+                                <p class="card-text">250</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-white bg-warning mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Customers</h5>
+                                <p class="card-text">150</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions Table -->
+                <h2>Recent Transactions</h2>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Customer</th>
+                        <th>Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2024-10-21</td>
+                        <td>John Doe</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-20</td>
+                        <td>Jane Smith</td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-19</td>
+                        <td>Mike Johnson</td>
+                        <td>$200</td>
+                    </tr>
+                    </tbody>
+                </table>
+<!--            </main>-->
+        </div>
+    </div>
+
+</main>
+
+<!--customer-->
+<main class="container" id="customerPage">
+    <header class="header">
+        <h1>Customer Management</h1>
+    </header>
+    <main class="content">
+        <div class="toolbar">
+            <button class="btn primary" id="btnAddNewCustomer">+ Add Customer</button>
+            <input type="search" class="search-input" id="search-input-customer" placeholder="Search by Name, ID, or Email">
+        </div>
+
+        <div class="table-container">
+            <table class="customer-table" >
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>NIC</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+                </thead>
+                <tbody id="customerTableBody">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="button-group">
+        </div>
+    </main>
+</main>
+
+<!--item-->
+<main class="container" id="itemPage">
+    <header class="header">
+        <h1>Item Management</h1>
+    </header>
+    <main class="content">
+        <section class="container mt-5">
+<!--            <h1>Item Details</h1>-->
+            <div class="toolbar">
+                <button type="button" class="btn primary" id="btnAddItem">+ Add Item</button>
+                <input type="search" class="search-input" id="searchInput" placeholder="Search by item ID or Name">
+            </div>
+
+            <div class="table-container">
+                <table class="item-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody id="itemTableBody">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="button-group">
+
+            </div>
+        </section>
+    </main>
+</main>
+
+<!--order-->
+<main class="container" id="orderPage">
+    <div class="container2 mt-5">
+        <h2>Place Order</h2>
+        <form id="orderForm">
+            <div class="row">
+                <div class="col left-side">
+
+                    <div class="mb-3">
+                        <label for="itemId" class="form-label">Item ID</label>
+                        <input type="text" class="form-control" id="itemId" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemName" class="form-label">Item Name</label>
+                        <input type="text" class="form-control" id="itemName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="unitPrice" class="form-label">Unit Price</label>
+                        <input type="text" class="form-control" id="unitPrice" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="qty" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="qty" min="1" required>
+                    </div>
+                </div>
+                <div class="col right-side">
+                    <div class="mb-3">
+                        <label for="customerContact" class="form-label">Contact</label>
+                        <input type="text" class="form-control" id="customerContact" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customerName" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="customerName" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btnAddToCart">Add to Cart</button>
+
+
+                </div>
+            </div>
+        </form>
+
+        <h3 class="mt-4">Order Summary</h3>
+        <table class="table table-bordered mt-3" id="selectedItemsTable">
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th class="right-align">Quantity</th>
+                <th class="right-align">Price</th>
+                <th class="right-align">Total</th>
+            </tr>
+            </thead>
+            <tbody id="selectedItemsBody">
+            <!-- Order items will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+        <h4 class="mt-3">Total Amount: Rs.<span id="totalAmount">0</span></h4>
+    </div>
+</main>
+
+<!--add customer-->
+<main class="container" id="addCustomerForm">
+    <div class="container-fluid header">
+        <div class="logo-section">
+<!--            <img src="logo.png" alt="Company Logo" class="logo">-->
+            <h1>Customer Management</h1>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="card customer-card">
+            <h2 class="card-title">Customer Details</h2>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nic" class="form-label">NIC</label>
+                        <input type="text" class="form-control" id="nic" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Number</label>
+                        <input type="text" class="form-control" id="phone" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="saveCustomer">Submit</button>
+                    <button class="btn secondary" id="btnUpdateCustomer">Update</button>
+                    <button class="btn danger" id="btnDeleteCustomer">Delete</button>
+                    <button type="button" class="btn btn-secondary" id="cancelAddCustomer">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--add item-->
+<main class="container" id="addItemForm">
+    <div class="container-fluid header">
+        <div class="logo-section">
+<!--            <img src="logo.png" alt="Company Logo" class="logo">-->
+            <h1>Inventory Management</h1>
+        </div>
+    </div>
+    <main class="content-wrapper">
+        <section class="form-card">
+            <h2 class="form-title">Add Item</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name1" placeholder="Enter item name" required>
+                </div>
+                <div class="form-group">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="price" placeholder="Enter item price" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" placeholder="Enter item quantity" required>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn primary-btn" id="saveItem">Submit</button>
+                    <button type="button" class="btn secondary" id="btnUpdateItem">Update</button>
+                    <button type="button" class="btn danger" id="btnDeleteItem">Delete</button>
+                    <button type="button" class="btn danger-btn" id="cancelAddItem">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</main>
+
+<!--footer-->
+<footer class="footer">
+    <p>&copy; 2024 POS Management System. All rights reserved.</p>
+</footer>
+<script src="lib/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="controller/CustomerController.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="controller/ItemController.js"></script>
+<script type="module" src="controller/OrderController.js"></script>
+<script>
+
+    let dashboard_nav = document.getElementById("dashboardNav");
+    let customer_nav = document.getElementById("customerNav");
+    let item_nav = document.getElementById("itemNav");
+    let order_nav = document.getElementById("orderNav");
+
+    let dashboard_section = document.getElementById("dashboardPage");
+    let customer_section = document.getElementById("customerPage");
+    let item_section = document.getElementById("itemPage");
+    let order_section = document.getElementById("orderPage");
+    let addCustomer=document.getElementById("addCustomerForm");
+    let addItem=document.getElementById("addItemForm");
+
+    let btnAddCustomer=document.getElementById("btnAddNewCustomer");
+    let btnAddItem=document.getElementById("btnAddItem");
+
+    let cancelAddItem=document.getElementById("cancelAddItem");
+    let cancelAddCustomer=document.getElementById("cancelAddCustomer");
+
+    dashboard_section.style.display="block";
+    customer_section.style.display="none";
+    item_section.style.display="none";
+    order_section.style.display="none";
+    addCustomer.style.display="none";
+    addItem.style.display="none";
+
+    customer_nav.addEventListener('click', function () {
+
+        customer_section.style.display="block";
+        item_section.style.display="none";
+        order_section.style.display="none";
+        addCustomer.style.display="none";
+        addItem.style.display="none";
+        dashboard_section.style.display="none";
+    });
+
+    dashboard_nav.addEventListener('click', function () {
+        dashboard_section.style.display="block"
+        customer_section.style.display="none";
+        item_section.style.display="none";
+        order_section.style.display="none";
+        addCustomer.style.display="none";
+        addItem.style.display="none";
+    })
+    item_nav.addEventListener('click', function () {
+        dashboard_section.style.display="none";
+        customer_section.style.display="none";
+        item_section.style.display="block";
+        order_section.style.display="none";
+        addCustomer.style.display="none";
+        addItem.style.display="none";
+    });
+    order_nav.addEventListener('click', function () {
+        dashboard_section.style.display="none";
+        customer_section.style.display="none";
+        item_section.style.display="none";
+        order_section.style.display="block";
+        addCustomer.style.display="none";
+        addItem.style.display="none";
+    });
+
+    btnAddCustomer.addEventListener('click',function (){
+        dashboard_section.style.display="none";
+        customer_section.style.display="none";
+        item_section.style.display="none";
+        order_section.style.display="none";
+        addCustomer.style.display="block";
+        addItem.style.display="none";
+    });
+
+    btnAddItem.addEventListener('click',function (){
+        addItem.style.display="block";
+        dashboard_section.style.display="none";
+        customer_section.style.display="none";
+        item_section.style.display="none";
+        order_section.style.display="none";
+        addCustomer.style.display="none";
+    });
+
+    cancelAddCustomer.addEventListener('click',function (){
+        addCustomer.style.display="none";
+        dashboard_section.style.display="none";
+        customer_section.style.display="block";
+        item_section.style.display="none";
+        order_section.style.display="none";
+        addItem.style.display="none";
+    });
+
+    cancelAddItem.addEventListener('click',function (){
+        addItem.style.display="none";
+        dashboard_section.style.display="none";
+        customer_section.style.display="none";
+        item_section.style.display="block";
+        order_section.style.display="none";
+        addCustomer.style.display="none";
+    });
+</script>
+
+</body>
+</html>

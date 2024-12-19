@@ -1,0 +1,71 @@
+* .title{
+    color: black;
+    font-size: 25px;
+
+}
+.sub{
+    color: whitesmoke;
+    font-size: 20px;
+    padding: 10px;
+
+
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    cursor: pointer;
+    padding: 12px 8px 12px 40px;
+    font-size: 25px;
+    font-family: "Imprint MT Shadow";
+
+}
+.close {
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+    font-size: 20px;
+    background-image: url("images/icons8-trash-24.png");
+}
+.deleteBtn{
+
+    float: right;
+    font-size: 20px;
+}
+.header {
+
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    background-image: url("images/R.jpg");
+
+}
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+.addBtn {
+    padding: 9px;
+    width: 20%;
+    background: dodgerblue;
+    color: black;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Serif";
+
+
+}
+
